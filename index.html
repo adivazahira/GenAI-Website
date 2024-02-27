@@ -5,24 +5,35 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Find the Perfect Dog Breed for You!</title>
 <style>
-  body { font-family: Arial, sans-serif; }
+  body { font-family: Arial, sans-serif; text-align: center; } /* Center align body content */
+  h1 {
+    display: inline-block; /* Make the h1 block inline to enable box-sizing */
+    margin: 20px auto; /* Vertical margin for spacing, auto for horizontal centering */
+    padding: 10px; /* Padding inside the box */
+    border: 2px solid #4CAF50; /* Border around the title */
+    border-radius: 10px; /* Rounded corners for the box */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow for depth */
+  }
   .button {
     background-color: #4CAF50;
     color: white;
     padding: 14px 20px;
-    margin: 10px 0;
+    margin: 10px auto; /* Adjusted for center alignment */
     border: none;
     cursor: pointer;
-    width: 100%;
+    width: 50%; /* Adjust button width as needed */
+    display: block; /* Make the button block level to align it center */
   }
   .button:hover {
     background-color: #45a049;
   }
   .video-container {
     position: relative;
-    padding-bottom: 56.25%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
     height: 0;
     overflow: hidden;
+    margin: 0 auto; /* Center the video container */
+    width: 50%; /* Adjust video size */
   }
   .video-container video {
     position: absolute;
