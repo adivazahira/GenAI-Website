@@ -15,47 +15,62 @@
             height: 100vh;
             margin: 0;
             background-color: #e0f2f1; /* Light green background */
+            position: relative; /* Needed to position elements with absolute positioning */
+        }
+        .paw-print {
+            width: 100px; /* Adjust the size as needed */
+            margin-bottom: 20px;
         }
         h1 {
             color: #00695c; /* Darker shade of green */
-            margin: 20px 0;
+            z-index: 10; /* Ensure the title is above the video */
+            position: absolute;
+            top: 10%; /* Adjust as needed for positioning */
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
         .video-container {
             position: relative;
             width: 80%;
             max-width: 720px;
             overflow: hidden;
-            border-radius: 8px; /* Added for smooth corners */
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            border-radius: 8px;
         }
         .video-container video {
             width: 100%;
-            border-radius: 8px; /* Ensures the video corners are also rounded */
+            border-radius: 8px;
+        }
+        .video-container .cta-button {
+            position: absolute; /* Position the button over the video */
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 5; /* Ensure the button is above the video */
         }
         .cta-button {
-            background-color: #26a69a; /* Teal button */
+            background-color: #26a69a;
             color: white;
             padding: 12px 24px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 18px;
-            font-weight: 600; /* Making the text a bit bolder */
-            margin-top: 20px;
-            transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+            font-weight: 600;
+            transition: background-color 0.3s ease;
         }
         .cta-button:hover {
-            background-color: #00796b; /* Darker shade when hovered */
+            background-color: #00796b;
         }
     </style>
 </head>
 <body>
 
+    <img src="paw_print.png" alt="Paw Print" class="paw-print">
     <h1>Find the perfect dog breed for you!</h1>
     <div class="video-container">
         <video src="genai_video.mp4" autoplay loop muted></video>
+        <button class="cta-button" onclick="window.location.href='your_next_page.html'">Start Finding</button>
     </div>
-    <button class="cta-button" onclick="window.location.href='content.html'">Start Finding</button>
 
 </body>
 </html>
