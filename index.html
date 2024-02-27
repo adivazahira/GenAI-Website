@@ -24,7 +24,7 @@
     height: 0;
     overflow: hidden;
   }
-  .video-container iframe {
+  .video-container video {
     position: absolute;
     top: 0;
     left: 0;
@@ -38,7 +38,11 @@
 <h1>Find the Perfect Dog Breed for You!</h1>
 
 <div class="video-container">
-  <iframe src="YOUR_VIDEO_SOURCE_HERE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen autoplay loop></iframe>
+  <!-- Replace the iframe with video tag -->
+  <video autoplay loop muted controls>
+    <source src="genai_video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
 </div>
 
 <a href="content.html" class="button">Explore Breeds</a>
